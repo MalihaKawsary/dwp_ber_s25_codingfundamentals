@@ -39,6 +39,30 @@ def division(x):
     print(result)
 
 division(6)
+# Call the second function and use the variable that you created in the b) part as argument
+def division(x):
+    result=x/3
+    return(result)
+
+print(division(6))
+# (Bonus) HOMEWORK 4: Rock, Paper, Scissors
+import random
+def play_game(user_choice):
+    options=["Rock","Paper","Scissors"]
+    computer_choice=random.randint(0,2)
+    print("You choose {options[user_choice]}")
+    print("Computer choose {options([computer_choice])}")
+    if user_choice == computer_choice:
+        return "Tie"  
+    elif (user_choice==0 and computer_choice==0) or (user_choice==1 and computer_choice==0) or (user_choice==2 and computer_choice==1):
+         return "You win"
+        
+    else:
+         return "You loose"
+print(play_game(0))
+print(play_game(1))
+print(play_game(2))
+
 
 
 
