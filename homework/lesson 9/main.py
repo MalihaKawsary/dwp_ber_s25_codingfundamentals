@@ -88,7 +88,7 @@ def inquire(name):
 people = ["John", "Jane", "Janet"]
 result = [inquire(person) for person in people]
 print("Result: ")
-pprint(result)
+print(result)
 
 # Exercise 4: Meal cost game
 # def play_game():
