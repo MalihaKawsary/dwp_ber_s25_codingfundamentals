@@ -57,7 +57,38 @@
 # print(pick_random_name_project (students, "Project A") )
 # print(pick_random_name_project (students, "Project B") )
 # Exercise 2: Meal cost calculator
+import inquirer
+import random
 
+def inquire(name):
+  breakfast_base = random.randint(2, 6)
+  lunch_base = random.randint(10, 21)
+  dinner_base = random.randint(30, 51)
+  questions = [
+      inquirer.List(
+          "breakfast",
+          message=f"How much did {name} pay for breakfast? 🥐 ☕",
+          choices=[f"${breakfast_base}", f"${breakfast_base + 2}"],
+      ),
+      inquirer.List(
+          "lunch",
+          message=f"How much did {name} pay for lunch? 🍔",
+          choices=[f"${lunch_base}", f"${lunch_base + 7}"],
+      ),
+        inquirer.List(
+          "dinner",
+          message=f"How much did {name} pay for dinner? 🍽️",
+          choices=[f"${dinner_base}", f"${dinner_base + 15}"],
+      ),
+  ]
+  
+  transactions = inquirer.prompt(questions)
+  return {name: transactions}
+
+people = ["John", "Jane", "Janet"]
+result = [inquire(person) for person in people]
+print("Result: ")
+pprint(result)
 
 # Exercise 4: Meal cost game
 # def play_game():
