@@ -44,6 +44,7 @@ print(f'total number of employees in each department:{dept_counts}')
 plt.figure(figsize=(8, 8))
 
 plt.pie(dept_counts, labels=dept_counts.index, autopct='%1.1f%%', startangle=140)
+# dept_counts,  Sales  index   -     120 value
 
 plt.title('Percentage of Employees in Each Department')
 plt.axis('equal')  # Equal aspect ratio ensures the pie chart is circular
