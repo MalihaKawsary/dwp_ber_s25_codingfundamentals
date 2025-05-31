@@ -1,0 +1,12 @@
+Summary Statistics:
+Average salary of all employees: 74600.00
+Average age of all employees: 37.06
+Years of experience range: 1 to 40
+Number of departments: 4
+Departments: Marketing, HR, Sales, IT
+
+Department-wise Employee Distribution:
+Marketing: 34 employees (34.0%)
+Sales: 25 employees (25.0%)
+IT: 24 employees (24.0%)
+HR: 17 employees (17.0%)
