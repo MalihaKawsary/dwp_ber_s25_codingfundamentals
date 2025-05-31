@@ -51,8 +51,6 @@ plt.axis('equal')  # Equal aspect ratio ensures the pie chart is circular
 plt.show()
 
 
-dept_counts = df['Department'].value_counts()
-
 # Print department-wise counts and percentages in terminal
 total_employees = dept_counts.sum()
 print("Department-wise Employee Distribution:")
@@ -68,6 +66,6 @@ with open('homework/DataAnalysisProject/management_summary.txt', 'w') as f:
     f.write(f"Number of departments: {num_departments}\n")
     f.write(f"Departments: {', '.join(departments)}\n\n")
     f.write("Department-wise Employee Distribution:\n")
-    for dept, count in dept_counts.items():
-        percentage = (count / total_employees) * 100
-        f.write(f"{dept}: {count} employees ({percentage:.1f}%)\n")
+    # for dept, count in dept_counts.items():
+    #     percentage = (count / total_employees) * 100
+    f.write(f"{dept}: {count} employees ({percentage:.1f}%)\n")
